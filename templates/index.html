@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<style>
+  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: LightGray;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  margin: 8px;
+  padding: 10px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: DodgerBlue;
+  font-family: "Roboto",sans-serif;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.b1{
+  font-family: "Sofia",sans-serif;
+}
+.logo2{
+  font-family: "Roboto",sans-serif;
+  font-size: 30px;
+}
+/* nav bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: Crimson;
+}
+/* nav bar end */
+
+.hh{
+  font-family: "Sofia",sans-serif;
+  font-size: 40px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+/* footer style*/
+
+/* footer style end */
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="abt.html">About</a></li>
+</ul>
+
+<div class="about-section">
+  <h1>Types of Disease classifer using Machine Learning</h1>
+  <p style="font-size: 20px">We have tried to implement Convolutional Nueral Networks And build disease classifers using images</p>
+  <p style="font-size: 20px">The ML/AI is an emerging phase in various domains specially Medical Domain with ongoing Covid Scenario</p>
+</div>
+
+<h1 class ="hh" style="text-align:center">Try Projects Built by us..</h1>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="F:/lung.jpg" alt="Pneumonia" style="width:100%">
+      <div class="container">
+        <h2 style="text-align:center;">Pneumonia Prediction </h2>
+        <p class="title">Using Deep Nueral Networks</p>
+        <p>This web app is used to predict pneumonia disease according to the images fed to the model</p>
+        
+        <p><button class="button">Click for Pneumonia</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="F:/skin5.jpg" alt="Skin" style="width:100%">
+      <div class="container">
+        <h2 style="text-align: center;">Skin Cancer Prediction</h2>
+        <p class="title">Using 8 layer CNN</p>
+        <p>This web app is used to define 7 types of skin cancers witha an accuracy of 80%</p>
+      
+        <p><button class="button">Click here for Skin Cancer</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- footer -->
+  <footer class="custom">
+    <div class="container py-md-3">
+      <!-- logo -->
+      <h2 class="logo2"
+      style="text-align: center;">
+        
+          Disease Classifier
+        
+      </h2>
+      <!-- //logo -->
+      <!-- address -->
+      <div class="contact-left-footer mt-4">
+
+        <!-- <a href="community.html">Community</a> -->
+        </p>
+      </div>
+      <div class="w3l-copy text-center">
+        <h2 class="da" style="text-align: center;">A Machine Learning project hosted with Heroku<br> </h2>
+
+      </div>
+      <p class="homelogo">
+      <p class="b1 "style="text-align: center;">Made with ❤️ by Team 9</p>
+      <p style="text-align: center;">&copy; Copyright 2021 Team "9"</p>
+      
+    </div>
+  </footer>
+</body>
+
+</html>

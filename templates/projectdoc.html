@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a:link, a:visited {
+  background-color: Green;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: Crimson;
+}
+.container { 
+  height: 500px;
+  position: relative;
+  border: 3px solid green; 
+  font-family: "Verdana",sans-serif;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.hero-image {
+  background: url("{{ url_for('static', filename='images/mlbg.jpg') }}") no-repeat center; 
+  background-size: cover;
+  height: 504px;
+  position: relative;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: DodgerBlue;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+   <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('aboutus') }}">About Us</a>  
+    <a href="{{ url_for('contactflask') }}">Contact Us</a>
+    
+
+  </div>
+</div>
+<span style="font-size:30px;cursor:pointer;color: black;" onclick="openNav()">&#9776;Navigate</span>
+<div class="hero-image">
+<div class="container">
+  <div class="center">
+<h1 style="text-align: center;color:white;">To view the project click the Button</h1>
+<a style="text-align: center;" href="https://drive.google.com/file/d/1GCW4I6lsWGDLnj-mpki3t-65p4QJmWP3/view?usp=sharing" target="_blank">Project Report</a>
+</div>
+</div>
+</div>
+ <script>
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel = "icon" href = "{{ url_for('static', filename='images/lo.jpg') }}" type = "image/x-icon">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: GhostWhite;
+  }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  font-family: "Verdana",sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 black;
+  margin: 8px;
+  background-color: white;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: DodgerBlue;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.avatar {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  margin-left: 70px;
+  border-radius: 50%;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 black;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  font-family: "Roboto",sans-serif;
+}
+
+.title1 {
+  color: grey;
+  font-size: 18px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: DodgerBlue;
+  color: white;
+}
+</style>
+</head>
+<body>
+    <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('aboutus') }}">About Us</a>  
+    <a href="{{ url_for('contactflask') }}">Contact Us</a>
+  </div>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Go Back </span>
+<!--hero image-->
+
+<div class="about-section">
+  <h1>About Us </h1>
+  
+</div>
+
+<h1 style="text-align:center">Our Mentor</h1>
+<div class="card1">
+  
+  <img src="{{ url_for('static', filename='images/cda.jpg') }}" alt="Guide" style="width:100%">
+  <h1>Mrs. Shilpa Patil</h1>
+  <p class="title1">Project Guide and reviewer</p>
+  <p>CDAC,Bangalore</p>
+   <p>shilpamam@gmail.com</p>
+  <div style="margin: 24px 0;">
+    </div>
+
+</div>
+<h1 style="text-align: center;">Our Team</h1>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/ad.jpeg') }}" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Ankit Dhaka</h2>
+        <p class="title">Cloud hosting and Deployment</p>
+        <p>Hosted the entire model in Amazon Web Service instance</p>
+        <a href="https://www.facebook.com/profile.php?id=100005536421678"><i class="fa fa-twitter"></i></a>  
+        <a href="https://www.linkedin.com/in/ankit-dhaka-164133171/"><i class="fa fa-linkedin"></i></a>  
+        <a href="https://github.com/ANKITDHAKA786"><img src="{{ url_for('static', filename='images/favicon-32x32.png') }}"> </a>
+        <p>ankushdhaka545@gmail.com</p>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/kp.jpeg') }}" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Krishna Porwal</h2>
+        <p class="title">Front end/flask app development</p>
+        <p>Model Deployment with flask & web interface development</p>
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="https://www.linkedin.com/in/krishna-porwal-182160160/"><i class="fa fa-linkedin"></i></a>  
+         <a href="https://github.com/pythonist"><img src="{{ url_for('static', filename='images/favicon-32x32.png') }}"> </a>
+        <p>porwal11krishna@gmail.com</p>
+        
+      </div>
+    </div>
+  </div>
+   <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/sd.jpeg') }}" style="width:100%">
+      <div class="container">
+        <h2>Annabatula Sridevi</h2>
+        <p class="title">Model training & Documentation</p>
+        <p>Model Training and project documentation/report</p>
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="www.linkedin.com/in/annabattula-sridevi-5b3465197"><i class="fa fa-linkedin"></i></a>  
+         <a href="#"><img src="{{ url_for('static', filename='images/favicon-32x32.png') }}"> </a>
+        <p>sridevichowdary001@gmail.com</p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/hv.jpeg') }}" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Harika V.</h2>
+        <p class="title">Model training & Documentation</p>
+        <p>Model training with documentation and reporting</p>
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="https://www.linkedin.com/in/harika-vootukuri-547109147"><i class="fa fa-linkedin"></i></a>  
+         <a href="#"><img src="{{ url_for('static', filename='images/favicon-32x32.png') }}"> </a>
+        <p>vharika1896@gmail.com</p>
+          </div>
+  </div>
+</div>
+         <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/vb.jpg') }}" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Vemula Balvardhana</h2>
+        <p class="title">Project Debugging</p>
+        <p>Project flow analysis,resousrces management and interface testing</p>
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="linkedin.com/in/balavardhan-vemula-09645718b"><i class="fa fa-linkedin"></i></a>  
+         <a href="#"><img src="{{ url_for('static', filename='images/favicon-32x32.png') }}"> </a>
+        <p>balavardhan.vemula@gmail.com</p>
+       
+      </div>
+    </div>
+  </div>
+   <script>
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script> 
+ <!-- footer -->
+  <footer class="custom">
+    <div class="container py-md-3">
+      <!-- logo -->
+      <h2 class="logo2"
+      style="text-align: center;">
+        
+          
+        
+      </h2>
+      <h3 style="text-align: center;">Built Using</h3>
+      <img src="{{ url_for('static', filename='images/gcl.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/fll.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/anl.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/k.jpg') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/keras.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/awslo.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/jsl.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/tfsl.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/htmll.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/csss.png') }}" alt="Avatar" class="avatar">
+      <img src="{{ url_for('static', filename='images/sb.jpg') }}" alt="Avatar" class="avatar">
+      
+      
+      <!-- //logo -->
+      <!-- address -->
+      <div class="contact-left-footer mt-4">
+
+        <!-- <a href="community.html">Community</a> -->
+        </p>
+      </div>
+      <div class="w3l-copy text-center">
+        <h2 class="da" style="text-align: center;">A Machine Learning project hosted with AWS<br> </h2>
+
+      </div>
+      <p class="homelogo">
+      <p class="b1 "style="text-align: center;">Made with ❤️ by Team 9</p>
+      <p style="text-align: center;">&copy; Copyright 2021 Team "9"</p>
+      
+    </div>
+  </footer>
+  
+
+</body>
+</html>

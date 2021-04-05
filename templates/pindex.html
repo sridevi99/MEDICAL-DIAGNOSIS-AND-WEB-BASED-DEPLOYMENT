@@ -1,0 +1,73 @@
+{% extends "pbase.html" %} {% block content %}
+
+<head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <script type="text/javascript">
+   function sweetalert() {
+      
+    swal({
+        title: "Are you sure?",
+  text: "Only select X-ray images related to the disease ",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+    })
+    .then((willDelete) => {
+  if (willDelete) {
+    swal("Continue with the image...", {
+      icon: "success",
+    });
+  } else {
+    swal("Please check the image again!");
+  }
+});
+}
+    </script>
+</head>
+
+<body>
+    <ul>
+<li>This web application is based on a 8-layer convolutional neural network (CNN), trained to recognise pneumonia on chest x-rays. The neural network achieved accuracy exceeding 91.87 % on the relevant test set x-rays.</li>
+<li>Please note that the predictive accuracy of the model, depends on the quality and quantity of the training data. Therefore the model has limitations and cannot be used for definite clinical predictions! Instead it can be used for research and comparison purposes.</li>
+</ul>
+</body>
+
+<h2></h2>
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label" onclick="sweetalert()">
+            Select Image
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div>
+<body>
+<h3>Thanks For Testing!</h3>
+<h4>Further Readings:-</h4>
+<ul>
+    <li>The Dataset can be found here: <a href="https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia">Pneumonia Chest X-ray Dataset</a></li>
+    <li>This model has been trained on Google Colab</li>
+    <li>To know more about Pneumonia follow this link: <a href="https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204">Read more Here</a></li>
+    <li><b style="color:red">This is for demonstration purpose only, please dont consider this for clinical purposes!</b></li>
+    <li>For more Details contact No-one</li>
+</ul>
+</body>
+{% endblock %}

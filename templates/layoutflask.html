@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mainflask.css') }}">
+    <link rel = "icon" href = "{{ url_for('static', filename='images/lo.jpg') }}" type = "image/x-icon">
+  </head>
+  <body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Contact & Support</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="{{ url_for('homeflask') }}">Home</a></li>
+          <li><a href="{{ url_for('contactflask') }}">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
