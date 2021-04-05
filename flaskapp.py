@@ -35,11 +35,11 @@ app.config["MAIL_PASSWORD"] = '#1998@EXPp'
 
 mail.init_app(app)
 
-model = load_model('model_pneum.h5')
+model = load_model('Model/model_pneum.h5')
 
-model1= load_model('model.h5')  
+model1= load_model('Model/model.h5')  
 
-model3= pickle.load(open('model.pkl', 'rb')) 
+model3= pickle.load(open('Model/model.pkl', 'rb')) 
 
  
 
@@ -53,7 +53,7 @@ lesion_classes_dict = {
      6:'Dermatofibroma'
 }
 
-model2= load_model('model-015.model')  
+model2= load_model('Model/model-015.model')  
 
 
 label_dict={
